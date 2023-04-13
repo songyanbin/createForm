@@ -2,7 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 
 const Index = () => import(/* webpackChunkName: 'base' */ "../views/index.vue");
-const CreateFrom = () => import(/* webpackChunkName: 'base' */ "../views/createfrom/index.vue");
+const CreateForm = () => import(/* webpackChunkName: 'base' */ "../views/createform/index.vue");
 const NoFound = () => import("../views/404/index");
 Vue.use(VueRouter);
 
@@ -10,7 +10,7 @@ const routes = [
   {
     path: "",
     name: "",
-    redirect: "/createFrom"
+    redirect: "/createForm"
   },
   {
     path: "/",
@@ -18,11 +18,11 @@ const routes = [
     component: Index,
     children: [
       {
-        path: "/createFrom",
-        name: "CreateFrom",
-        component: CreateFrom,
+        path: "/createForm",
+        name: "CreateForm",
+        component: CreateForm,
         meta: {
-          index: "/createFrom",
+          index: "/createForm",
         }
       },
       {
