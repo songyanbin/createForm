@@ -2,4 +2,46 @@
   /deep/ .vue-grid-item {
     border: 1px dashed #C0C4CC;
   }
+  .config-box {
+    display: flex;
+    .left {
+      width: 200px;
+      .title {
+        font-size: 20px;
+        line-height: 30px;
+        color: #333333;
+        font-weight: bold;
+      }
+      .list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .item {
+          width: 60px;
+          height: 60px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          cursor: pointer;
+          p {
+            font-size: 14px;
+            color: #909399;
+            line-height: 20px;
+            padding-top: 5px;
+          }
+        }
+      }
+    }
+    .main-content {
+      flex: 1;
+      border: 1px solid #C0C4CC;
+      /deep/ .vue-grid-layout {
+        min-height: 300px;
+      }
+    }
+    .right {
+      width: 200px;
+    }
+  }
 }
