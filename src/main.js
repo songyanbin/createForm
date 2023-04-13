@@ -8,7 +8,7 @@ import "@assets/css/reset.less";
 import * as Echarts from "echarts";
 Vue.prototype.$echarts = Echarts;
 Vue.use(ElementUI);
-
+// test
 var vue = new Vue({
     router,
     store,
