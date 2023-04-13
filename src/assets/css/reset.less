@@ -1,0 +1,463 @@
+@import "./element-reset.less";
+@import "./config.less";
+/**
+ * 标签重置
+ */
+html {
+    //font-size: 14px;
+}
+
+body, div, dl, dt, dd, ul, ol, li,
+h1, h2, h3, h4, h5, h6, pre, code,
+form, fieldset, legend, input, button,
+textarea, p, blockquote, th, td {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    //font-size: 14px;
+    min-height: 100vh;
+    background: #f3f4f7;
+}
+
+
+body, button {
+    // ont-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-family:" PingFangSC-Semibold,PingFang SC", "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+ol {
+    padding-left: 22px;
+}
+
+hr {
+    margin: 10px 0;
+    border: 0;
+    border-top: 1px solid #eee;
+    border-bottom: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+em {
+    font-style: normal;
+}
+
+.h5, h5 {
+    font-size: 14px;
+}
+
+.h4, .h5, .h6, h4, h5, h6 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+
+// firefox button reset
+button::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner {
+    border: none;
+    padding: 0;
+}
+
+code {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 4px;
+}
+
+img {
+    border: none;
+}
+
+.hidden-tag {
+    display: none;
+}
+
+//
+.bottom-line {
+    position: relative;
+}
+
+.bottom-line::after {
+    content: " ";
+    width: 100%;
+    min-width: 1260px;
+    max-width: 1296px;
+    height: 1px;
+    margin: auto;
+    background-color: rgba(53, 53, 55, 0.3);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+//element-less
+//radio
+.el-radio__inner {
+    width:18px;
+    height:18px;
+    background: #fff;
+    border:1px solid rgba(210,210,210,1);
+}
+.el-radio__input.is-checked .el-radio__inner {
+    width:18px;
+    height:18px;
+    //border-radius:7px;
+    border: 0 none;
+    background: url("~@assets/images/reset/ele_radio_checked.png");
+    background-size: cover;
+}
+.el-radio__inner::after {
+    width: 0;
+}
+.el-radio {
+    font-size:14px;
+    font-family:PingFangSC-Regular,PingFang SC;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+}
+.el-radio__input.is-checked+.el-radio__label {
+    font-size:14px;
+    font-family:PingFangSC-Regular,PingFang SC;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+}
+.el-radio__inner:hover {
+border-color: @mainColor
+}
+
+//page
+.el-pagination {
+    font-size:12px;
+    font-family:PingFangSC-Regular,PingFang SC;
+    font-weight:400;
+    color:rgba(45,47,52,1);
+}
+.el-pagination__total {
+    font-size:12px;
+    font-family:PingFangSC-Regular,PingFang SC;
+    font-weight:400;
+    color:rgba(141,147,157,1);
+}
+.el-pagination__jump {
+    font-size:12px!important;
+    font-family:PingFangSC-Regular,PingFang SC;
+    font-weight:400!important;
+    color:rgba(141,147,157,1)!important;
+    margin-left: 0!important;
+}
+.el-pagination__editor {
+    height: 26px!important;
+    color:rgba(141,147,157,1)!important;
+}
+.el-pagination__editor.el-input .el-input__inner {
+    height: 26px!important;
+    color:rgba(141,147,157,1) !important;
+}
+.el-pagination__sizes {
+    font-size:12px!important;
+    font-family:PingFangSC-Regular,PingFang SC;
+    font-weight:400!important;
+    color:rgba(141,147,157,1)!important;
+    margin-right: 0!important;
+}
+.el-pagination__jump {
+    margin-left: 0 !important;
+}
+.el-pager {
+    .number {
+        font-size:12px !important;;
+        font-family:PingFangSC-Regular,PingFang SC;
+        font-weight:400 !important;;
+        color:rgba(45,47,52,1) !important;;
+        padding: 0 16px!important;
+    }
+    li.active {
+        padding: 0 !important;
+        font-size:12px !important;;
+        font-family:PingFangSC-Regular,PingFang SC;
+        font-weight:400 !important;;
+        color:@mainColor !important;;
+    }
+}
+.el-pagination .btn-next, .el-pagination .btn-prev{
+    color:rgba(141,147,157,1)!important;
+}
+
+//添加分组弹窗
+.addGroupModal {
+    .el-dialog__header {
+        padding: 0;
+        padding-top: 28px;
+        text-align: center;
+        font-size:24px;
+        font-family:PingFangSC-Medium,PingFang SC;
+        font-weight:500;
+        color:rgba(51,51,51,1);
+    }
+    .el-dialog {
+        width: 660px;
+        background:rgba(255,255,255,1);
+        border-radius:20px;
+    }
+    .el-dialog__headerbtn {
+        top: 37px !important;
+        right: 30px !important;
+    }
+    .el-dialog__body {
+        padding: 50px 30px 30px;
+    }
+    .el-dialog__footer {
+        text-align: center;
+        padding-bottom: 50px;
+        padding-top: 0;
+    }
+    .courseG-gourpModal-select {
+        width: 600px !important;
+    }
+    .courseG-gourpModal-selectone {
+        width: 300px !important;
+    }
+    .courseG-gourpModal-selecttwo {
+        width: 300px !important;
+    }
+    .courseG-gourpModal-selectone {
+        padding-top: 38px !important;
+        padding-bottom: 20px !important;
+    }
+    .courseG-gourpModal-page {
+        text-align: center !important;
+    }
+    .courseG-gourpModal-selecttwo {
+        padding-top: 38px !important;
+        padding-bottom: 20px !important;
+    }
+    .courseG-gourpModal-table-head {
+        margin-top: 30px !important;
+    }
+    .courseG-gourpModal-selectone-title {
+        font-size:16px;
+        font-family:PingFangSC-Medium,PingFang SC;
+        font-weight:500;
+        color:rgba(51,51,51,1);
+    }
+    .el-dialog__headerbtn .el-dialog__close {
+        color: #dcdde0;
+    }
+}
+//公用删除弹窗
+.customDelModal {
+    .el-dialog__header {
+        display: none;
+    }
+    .el-dialog__body {
+        padding: 0;
+        text-align: center;
+        font-size:24px;
+        font-family:PingFangSC-Medium,PingFang SC;
+        font-weight:500;
+        color: #333;
+    }
+    .el-dialog {
+        padding: 30px 0 0;
+        width: 360px;
+        box-sizing: border-box;
+        background:rgba(255,255,255,1);
+        border-radius:20px;
+    }
+    .el-dialog__footer {
+        text-align: center;
+        margin-top: 80px;
+    }
+
+
+}
+
+//最新弹窗custom
+.customPlatformModal {
+    .el-dialog__header {
+        display: none;
+    }
+    .customPlatformModal-conttext {
+        font-size:14px;
+        font-family:PingFangSC-Regular,PingFang SC;
+        font-weight:400;
+        color:rgba(140,141,158,1);
+        margin-top: 10px;
+    }
+    .el-dialog__body {
+        font-size:20px;
+        font-family:PingFangSC-Medium,PingFang SC;
+        font-weight:500;
+        color:rgba(51,51,51,1);
+        padding: 0;
+        text-align: center;
+    }
+    .el-dialog {
+        padding: 34px 0 44px;
+        width: 360px;
+        box-sizing: border-box;
+        background:rgba(255,255,255,1);
+        border-radius:20px;
+    }
+    .el-dialog__footer {
+        text-align: center;
+        padding-bottom: 43px;
+        padding: 0;
+        margin-top: 60px;
+    }
+    .el-button--default {
+        border-radius:44px;
+        height: 44px;
+        line-height: 44px;
+        border:1px solid rgba(220,220,220,1);
+        font-size:16px;
+        font-family:PingFangSC-Regular,PingFang SC;
+        font-weight:400;
+        color:rgba(51,51,51,1);
+        padding: 0 30px;
+    }
+    .el-button--default:hover {
+        background:rgba(240,118,43,0.3);
+    }
+    .el-button--primary {
+        height: 44px;
+        line-height: 44px;
+        background:linear-gradient(270deg,rgba(240,118,43,1) 0%,rgba(239,94,23,1) 100%);
+        border-radius:44px;
+        padding: 0 30px;
+        font-size:16px;
+        font-family:PingFangSC-Medium,PingFang SC;
+        font-weight:500;
+        color:rgba(255,255,255,1);
+        border: 0 none;
+        margin-left: 20px;
+    }
+}
+.customlist-page {
+    .el-pagination {
+        font-size:12px;
+        font-family:PingFangSC-Regular,PingFang SC;
+        font-weight:400;
+        color:rgba(45,47,52,1);
+    }
+    .el-pagination__total {
+        font-size:12px;
+        font-family:PingFangSC-Regular,PingFang SC;
+        font-weight:400;
+        color:rgba(141,147,157,1);
+    }
+    .el-pagination__jump {
+        font-size:12px!important;
+        font-family:PingFangSC-Regular,PingFang SC;
+        font-weight:400!important;
+        color:rgba(141,147,157,1)!important;
+        margin-left: 0!important;
+    }
+    .el-pagination__editor {
+        height: 26px!important;
+        color:rgba(141,147,157,1)!important;
+    }
+    .el-pagination__editor.el-input .el-input__inner {
+        height: 26px!important;
+        color:rgba(141,147,157,1) !important;
+    }
+    .el-pagination__sizes {
+        font-size:12px!important;
+        font-family:PingFangSC-Regular,PingFang SC;
+        font-weight:400!important;
+        color:rgba(141,147,157,1)!important;
+        margin-right: 0!important;
+    }
+    .el-pagination__jump {
+        margin-left: 0 !important;
+    }
+}
+
+.icon {
+    width: 1em;
+    height: 1em;
+    //vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+.felx1 {
+    flex: 1;
+}
+.actionsbox{
+    margin-top: 16px;
+}
+.ml24 {
+    margin-left: 24px;
+}
+.mt24 {
+    margin-top: 24px;
+}
+.mt12 {
+    margin-top: 12px;
+}
+.global-page {
+    .top-box {
+        background: #ffffff;
+        border-radius: 4px;
+        box-shadow: 0 2px 6px 0 rgba(0,0,0,0.06);
+
+        .title-box {
+            padding: 0 24px;
+            height: 58px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #dce1e6;
+            .title-txt {
+                font-size: 16px;
+                line-height: 26px;
+                color: #303133;
+                font-weight: 500;
+            }
+            .create-btn {
+                width: 100px;
+                height: 36px;
+                font-size: 16px;
+                .btn-txt {
+                    padding-left: 4px;
+                    font-size: 14px;
+                    line-height: 22px;
+                }
+            }
+        }
+        .search-box {
+            padding: 16px 24px 0;
+            .el-form-item {
+                margin-bottom: 16px;
+            }
+        }
+    }
+    .content-box {
+        background: #ffffff;
+        border-radius: 4px;
+        margin-top: 16px;
+        box-shadow: 0 2px 6px 0 rgba(0,0,0,0.06);
+    }
+    .pagination-box {
+        text-align: right;
+        padding: 22px 24px;
+    }
+}

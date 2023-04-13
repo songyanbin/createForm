@@ -1,0 +1,5 @@
+src/apis/**
+src/store/**
+**/modules/**
+vue.config.js
+src/**
